@@ -1,7 +1,22 @@
 # Prompt
 # =====================
+# Returns current branch name if in git repository.
+# https://medium.com/pareture/simplest-zsh-prompt-configs-for-git-branch-name-3d01602a6f33
+function git_current_branch() {
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '('$branch')'
+  fi
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
 PROMPT='
-%F{cyan}%D{%Y-%m-%d} %* %F{magenta}%n@%m: %{$reset_color%}%1d ($(git_current_branch))
+%F{cyan}%D{%Y-%m-%d} %* %F{magenta}%n@%m: %F{white}%1d $(git_current_branch)
 🏄‍♀️ '
 
 # Aliases
