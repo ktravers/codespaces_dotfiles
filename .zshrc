@@ -16,7 +16,7 @@ function git_current_branch() {
 setopt prompt_subst
 
 PROMPT='
-%F{cyan}%D{%Y-%m-%d} %* %F{magenta}%n@%m: %F{white}%1d $(git_current_branch)
+%F{cyan}%D{%Y-%m-%d} %* %F{magenta}$GITHUB_USER@%m: %F{white}%1d $(git_current_branch)
 🏄‍♀️ '
 
 # Aliases
