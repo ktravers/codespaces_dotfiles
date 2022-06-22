@@ -19,6 +19,20 @@ PROMPT='
 %F{cyan}%D{%Y-%m-%d} %* %F{magenta}$GITHUB_USER@%m: %F{white}%1d $(git_current_branch)
 🏄‍♀️ '
 
+# Environment Variables
+# =====================
+# Git
+# https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables
+export GIT_MERGE_AUTOEDIT='no'
+
+# Editors
+# Tells your shell that when a program requires various editors, use sublime.
+# The -w flag tells your shell to wait until sublime exits
+export VISUAL="code -w"
+export SVN_EDITOR="code -w"
+export GIT_EDITOR="code -w"
+export EDITOR="code -w"
+
 # Aliases
 # =====================
 # Git
