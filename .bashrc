@@ -19,14 +19,6 @@ prompt
 # https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables
 export GIT_MERGE_AUTOEDIT='no'
 
-# Editors
-# Tells your shell that when a program requires various editors, use sublime.
-# The -w flag tells your shell to wait until sublime exits
-export VISUAL="code -w"
-export SVN_EDITOR="code -w"
-export GIT_EDITOR="code -w"
-export EDITOR="code -w"
-
 # Aliases
 # =====================
 # Git
