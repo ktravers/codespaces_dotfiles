@@ -7,7 +7,7 @@ function parse_git_branch {
 
 # build prompt and call below
 function prompt {
-  export PS1='\n\e[0;30m\e[46m\t\e[0;36m \u @\h: \W\e[0;35m$(parse_git_branch)\e[0;37m\n🏄‍♀️ '
+  export PS1='\n\e[0;30m\e[46m\t\e[0;36m \u@\h: \W\e[0;35m$(parse_git_branch)\e[0;37m\n🏄‍♀️ '
     PS2='> '
     PS4='+ '
 }
@@ -22,15 +22,16 @@ export GIT_MERGE_AUTOEDIT='no'
 # Aliases
 # =====================
 # Git
-alias gbv="git branch -v"
 alias gbdall="git branch | grep -v 'master' | xargs git branch -D"
+alias gbv="git branch -v"
+alias gca!='git commit --amend --no-edit'
 alias gcm="git checkout master"
 alias gco="git checkout"
-alias gca!='git commit --amend --no-edit'
+alias glp="git --paginate log --pretty=format:'%C(auto)%h%Creset %s%C(auto)%d%Creset %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset' -10"
 alias glr="git pull --rebase --prune && git gc"
+alias grh="git reset HEAD"
 alias gst="git status"
 alias gsv="git status -vv"
-alias grh="git reset HEAD"
 alias repush="git pull --rebase && git push"
 alias stash="git stash -u"
 
