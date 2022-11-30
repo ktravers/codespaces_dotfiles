@@ -1,2 +1,3 @@
 # codespaces_dotfiles
-GitHub Codespaces flavored dotfiles
+
+Dotfiles specifically for use in my GitHub codespaces.
