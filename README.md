@@ -1,2 +1,3 @@
 # codespaces_dotfiles
-GitHub Codespaces flavored dotfiles
+
+Dotfiles for ktravers' GitHub codespaces
