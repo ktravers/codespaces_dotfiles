@@ -1,0 +1,20 @@
+[color]
+  ui = auto
+[commit]
+  verbose = true
+[fetch]
+	prune = true
+[github]
+	user = ktravers
+[init]
+  defaultBranch = main
+[pager]
+	branch = false
+[push]
+	default = simple
+  autosetupremote = true
+[rebase]
+	autosquash = true
+  rebase = true
+[rerere]
+  enabled = true
